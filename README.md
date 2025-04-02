@@ -1,2 +1,3 @@
 # LLD
-Practice LLD interview questions
+Practice LLD interview questions and DPs.
+Learning bit by bit.
