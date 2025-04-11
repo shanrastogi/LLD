@@ -7,5 +7,5 @@ public abstract class Notification {
         this.notificationSender = notificationSender;
     }
 
-    abstract void sendMessage();
+    public abstract void sendMessage();
 }

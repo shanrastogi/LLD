@@ -1,6 +1,7 @@
 package com.example.bridgedp;
 
 import com.example.bridgedp.models.Email;
+import com.example.bridgedp.models.Notification;
 import com.example.bridgedp.models.NotificationSender;
 import com.example.bridgedp.models.QrMessage;
 import com.example.bridgedp.models.Sms;
@@ -11,10 +12,10 @@ public class Main {
         NotificationSender email = new Email();
         NotificationSender sms = new Sms();
 
-        QrMessage qrMessage = new QrMessage(sms);
+        Notification qrMessage = new QrMessage(email);
         qrMessage.sendMessage();
 
-        TextMessage smsMessage = new TextMessage(email);
+        Notification smsMessage = new TextMessage(sms);
         smsMessage.sendMessage();
 
     }
