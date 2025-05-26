@@ -7,23 +7,23 @@ import javafx.util.Pair;
 public class Board {
     public int size;
     public PlayingPiece[][] board;
-    
+
     public Board(int size) {
         this.size = size;
         board = new PlayingPiece[size][size];
     }
-    
+
     public PlayingPiece getPiece(int row, int col) {
         return board[row][col];
     }
-    
+
     public boolean setPiece(int row, int col, PlayingPiece piece) {
-        if(row < 0 || row >= size || col < 0 || col >= size) {
+        if (row < 0 || row >= size || col < 0 || col >= size) {
             return false; // Invalid position
         }
-        if(board[row][col] != null) {
+        if (board[row][col] != null) {
             return false; // Position already occupied
-        }        
+        }
         board[row][col] = piece;
         return true; // Piece placed successfully
     }
@@ -103,5 +103,5 @@ public class Board {
             System.out.println(" | ");
         }
     }
-    
+
 }
